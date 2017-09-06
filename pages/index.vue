@@ -1,29 +1,32 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        ssr-blog
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
+  <div>
+    <section class="hero is-medium is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Welcome to the JavaScript SSR Blog.
+          </h1>
+          <h2 class="subtitle">
+            Hope you find something you like.
+          </h2>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <posts />
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+  import Posts from '~/components/Posts.vue'
 
-export default {
-  components: {
-    Logo
+  export default {
+    components: {
+      Posts
+    },
+    head: {
+      title: 'Home'
+    }
   }
-}
 </script>
 
 <style>
